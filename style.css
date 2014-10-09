@@ -1,0 +1,28 @@
+#topcontainer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+    color: #333;
+    background: #FFF;
+}
+#flexmain {    
+    display: flex;        background: #D8D8D8;
+    position: relative;  
+    margin: 0 auto;  width: 70%;  
+    height: 500px;
+    min-width: 367px;  
+    padding: 0;  overflow: hidden;  
+}
+#flexleft {
+    display: inline-flex;
+    width: 30%;
+    background: #ACACAC;
+}
+#flexright {
+    display: inline-flex;  
+    width: 70%;  
+    background: #868383;
+}
