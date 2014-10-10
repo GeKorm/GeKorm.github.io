@@ -59,7 +59,6 @@ ol {
     left: 20%;
     z-index: 4;
     border-right: 1px solid rgb(238, 238, 238);
-    border-radius: 30px/130px;
 }
 
 li a:hover {
@@ -98,18 +97,19 @@ li a:active {
     width: 41.85%;
     z-index: 3;
     display: block;
+    background: rgba(64, 150, 238, 1);
     position: fixed;
     padding-top: 5px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    border-bottom: 4px solid rgba(56, 117, 194, 0.57);
-    height: 45px;
-    background: -moz-linear-gradient(to bottom, rgba(122, 188, 255, 1) 0%,rgba(96, 171, 248, 1) 44%,rgba(64, 150, 238, 1) 100%);      
-    background: -o-linear-gradient(to bottom, rgba(122, 188, 255, 1) 0%,rgba(96, 171, 248, 1) 44%,rgba(64, 150, 238, 1) 100%);  
-    background: -ms-linear-gradient(to bottom, rgba(122, 188, 255, 1) 0%,rgba(96, 171, 248, 1) 44%,rgba(64, 150, 238, 1) 100%);  
-    background: linear-gradient(to bottom,  rgba(122, 188, 255, 1) 0%,rgba(96, 171, 248, 1) 44%,rgba(64, 150, 238, 1) 100%);  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b37abcff', endColorstr='#bf4096ee',GradientType=0 );
+    /* border-bottom: 4px solid rgba(56, 117, 194, 0.57); */
+    height: 45px;            
     opacity: 1;
     box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;  -moz-user-select: none;
+    transition: all 0.1s ease-out;
 }
 #header::after {
     content:"";
@@ -119,13 +119,14 @@ li a:active {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     height: 5px;
-    margin-top: -17px;
+    margin-top: -21px;
     transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0.003,0,0,1,0,0,0,0,1);  
     -webkit-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0.004,0,0,1,0,0,0,0,1);  
     -moz-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0.003,0,0,1,0,0,0,0,1);  
     -o-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0.003,0,0,1,0,0,0,0,1);  
     -ms-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0.003,0,0,1,0,0,0,0,1);              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4872', endColorstr='#000000',GradientType=0 );              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22487c', endColorstr='#161823',GradientType=0 );
     background: linear-gradient(to bottom, rgba(66, 136, 206, 1) 0%,rgba(43, 100, 158, 0.98) 44%,rgba(47, 105, 165, 0.96) 100%);
+    transition: all 0.1s ease-in-out;
 }
 #section-title {
     font-size: 20px;
@@ -154,8 +155,10 @@ p {
     display: inline;
     position: relative;
     margin-left: 40px;
-    margin-right: 0;
+    margin-right: 40px;
     margin-bottom: 40px;
+    line-height: 19px;
+    font-size: 15px;
 }
 #triangledown {
 	width: 0;
@@ -182,4 +185,26 @@ p {
     background: rgb(255,247,251);  background: -moz-linear-gradient(top,  rgba(255,247,251,1) 0%, rgba(255,247,251,1) 90%, rgba(255,255,255,1) 100%);  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,247,251,1)), color-stop(90%,rgba(255,247,251,1)), color-stop(100%,rgba(255,255,255,1)));  background: -webkit-linear-gradient(top,  rgba(255,247,251,1) 0%,rgba(255,247,251,1) 90%,rgba(255,255,255,1) 100%);  background: -o-linear-gradient(top,  rgba(255,247,251,1) 0%,rgba(255,247,251,1) 90%,rgba(255,255,255,1) 100%);  background: -ms-linear-gradient(top,  rgba(255,247,251,1) 0%,rgba(255,247,251,1) 90%,rgba(255,255,255,1) 100%);  
     background: linear-gradient(to bottom,  rgba(255, 255, 255, 1) 10%,rgba(251, 239, 255, 1) 30%,rgba(255,255,255,1) 90%);  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff7fb', endColorstr='#ffffff',GradientType=0 );
     display: none;
+}
+
+#header:hover {
+    background: rgba(62, 144, 228, 1);
+    box-shadow: 0 12px 10px -8px rgba(0, 0, 0, 0.75);
+}
+#header:active:after {
+    transform: scaleY(0.75) scaleX(1.007) translateY(-3px);
+}
+#header:active {
+    box-shadow: 0 6px 10px -8px rgba(0, 0, 0, 0.75);
+    transform: scale(0.984);
+    transform-origin: 50% 0%;
+}
+
+::selection {
+  background: rgba(64, 150, 238, 1);
+  color:#FFF;
+}
+::-moz-selection {
+  background: #333;
+  color:#FFF;
 }
