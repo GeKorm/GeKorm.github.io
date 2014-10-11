@@ -109,7 +109,7 @@ li a:active {
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;  -moz-user-select: none;
-    transition: all 0.1s ease-out;
+    transition: all 0.2s ease-in-out;
 }
 #header::after {
     content:"";
@@ -189,15 +189,17 @@ p {
 
 #header:hover {
     background: rgba(62, 144, 228, 1);
-    box-shadow: 0 12px 10px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.75);
+    transition: all 0.2s ease-in-out;
 }
 #header:active:after {
     transform: scaleY(0.75) scaleX(1.007) translateY(-3px);
 }
 #header:active {
-    box-shadow: 0 6px 10px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 2px 20px -8px rgba(0, 0, 0, 0.75);
     transform: scale(0.984);
     transform-origin: 50% 0%;
+    transition: all 0.05s ease-out;
 }
 
 ::selection {
