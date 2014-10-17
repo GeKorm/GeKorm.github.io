@@ -525,3 +525,35 @@ body {
   }
 
 }
+
+@-moz-document url-prefix() {
+  #header:after {
+    content: "";
+    display: block;
+    width: 99.2%;
+    height: 6px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0.003, 0, 0, 1, 0, 0, 0, 0, 1);
+    background: linear-gradient(to bottom, #4288CE 0%, rgba(43, 100, 158, 0.98) 44%, rgba(47, 105, 165, 0.96) 100%) repeat scroll 0% 0% transparent;
+    transition: all 0.1s ease-in-out 0s;
+    position: absolute;
+    margin-left: 0.3%;
+    margin-top: 2px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    
+}
+  
+  #header:active:after {
+    transform: none;
+    width: 99.8%;
+    margin-top: -3px;
+    transition: all 0.05s ease-out;
+    border-radius: 32px;
+    margin-top: 2px;
+    margin-left: 0.2%;
+    height: 3px;
+    /* border-bottom-left-radius: 0; */
+    /* border-bottom-right-radius: 0; */
+}
+  
+}
