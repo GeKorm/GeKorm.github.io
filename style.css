@@ -10,6 +10,7 @@
   /* height: 0; */
 }
 
+
 #botcontainer {
   width: 100%;
   height: auto;
@@ -415,6 +416,11 @@ article {
   background-repeat: no-repeat;
 }
 
+body {
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  -webkit-touch-callout: none !important;
+}
+
 ::selection {
   background: #333;
   color: rgba(255, 255, 255, 1);
@@ -457,7 +463,7 @@ article {
     box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0);
 }
 
-  #tablewrap:hover, #tablewrap:active, #tablewrap:focus {
+  #tablewrap:hover, #tablewrap:active, #tablewrap:focus, #tablewrap.onhover {
     transform: none !important;
     box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.75);
 }
@@ -519,4 +525,3 @@ article {
   }
 
 }
-
