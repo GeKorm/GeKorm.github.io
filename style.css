@@ -451,15 +451,14 @@ article {
   }
 
   #tablewrap {
-    transform: translateX(-185px);
+    transform: translateX(-185px) !important;
     border-right: 4px solid #FC0;
     background: #FFF;
     box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0);
 }
 
-  #tablewrap:hover {
-    transform: none;
-
+  #tablewrap:hover, #tablewrap:active, #tablewrap:focus {
+    transform: none !important;
     box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.75);
 }
 
