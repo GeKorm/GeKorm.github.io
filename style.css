@@ -482,10 +482,22 @@ article {
   }
 
   #he2 {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0);
+    border-top: 4px solid #FC0;
+    border-bottom: 4px solid #FC0;
+    width: 32px;
+    height: 22px;
+    margin-top: 31px;
+    margin-left: 110px;
   }
 
   #he2::after {
+    margin-top: 9px;
+    content: "";
+    height: 20px;
+    width: 32px;
+    border-top: 4px solid #FC0;
+    text-align: left;
     transform: scaleX(1);
   }
 
@@ -499,7 +511,6 @@ article {
     }
 
     #he2 {
-      height: 45px;
       top: -23px;
     }
 
@@ -509,3 +520,4 @@ article {
   }
 
 }
+
