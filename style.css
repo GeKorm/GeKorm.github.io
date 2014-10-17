@@ -527,6 +527,7 @@ body {
 }
 
 @-moz-document url-prefix() {
+
   #header:after {
     content: "";
     display: block;
@@ -537,23 +538,27 @@ body {
     transition: all 0.1s ease-in-out 0s;
     position: absolute;
     margin-left: 0.3%;
-    margin-top: 2px;
+    margin-top: 1px;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
-    
-}
+  }
+
+  
+  #header {
+    border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+  }
   
   #header:active:after {
     transform: none;
     width: 99.8%;
-    margin-top: -3px;
+    margin-top: 0;
     transition: all 0.05s ease-out;
     border-radius: 32px;
-    margin-top: 2px;
     margin-left: 0.2%;
     height: 3px;
     /* border-bottom-left-radius: 0; */
     /* border-bottom-right-radius: 0; */
-}
+  }
   
 }
