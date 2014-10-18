@@ -105,6 +105,16 @@ ol {
   transition: all 0.2s ease-out, border 0.4s ease-in-out, opacity 0.1s ease-in-out;
 }
 
+.makebig {
+  transform: scale(2);
+
+}
+
+.onhover {
+  transform: none !important;
+  box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.75) !important;
+}
+
 #bottablewrap {
   position: fixed;
   display: flex;
@@ -457,15 +467,10 @@ body {
   }
 
   #tablewrap {
-    transform: translateX(-185px) !important;
+    transform: translateX(-185px);
     border-right: 4px solid #FC0;
     background: #FFF;
     box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0);
-}
-
-  #tablewrap:hover, #tablewrap:active, #tablewrap:focus, #tablewrap.onhover {
-    transform: none !important;
-    box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.75);
 }
 
   #flexright {
@@ -543,12 +548,12 @@ body {
     border-bottom-left-radius: 12px;
   }
 
-  
+
   #header {
     border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
   }
-  
+
   #header:active:after {
     transform: none;
     width: 99.8%;
@@ -560,5 +565,5 @@ body {
     /* border-bottom-left-radius: 0; */
     /* border-bottom-right-radius: 0; */
   }
-  
+
 }
